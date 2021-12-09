@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "auth",
-    "slug": "tp3-aplicaciones-mobile",
-    "scheme": "tp3-aplicaciones-mobile",
+    "name": "tp4-aplicaciones-mobile",
+    "slug": "tp4-aplicaciones-mobile",
+    "scheme": "tp4-aplicaciones-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
