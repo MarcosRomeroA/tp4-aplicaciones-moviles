@@ -29,6 +29,7 @@ export default function FilmDetail(data) {
     )
 }
 
+
 const styles = StyleSheet.create({
     image: {
         justifyContent: 'center',
