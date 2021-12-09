@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { View, Text } from 'react-native';
 import { AuthContext } from '../context/AuthContext';
-import FilmDetail from '../Components/FilmDetail';
+import FilmDetail from '../components/FilmDetail';
 
 const GOOGLE_INFO_URL = "https:/www.googleapis.com/oauth2/v3/userinfo?access_token=";
 

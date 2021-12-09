@@ -12,9 +12,9 @@ export const LoginScreen = () => {
   const navigation = useNavigation();
 
   const { setAuth } = React.useContext(AuthContext);
-
+ 
   const [request, response, promptAsync] = Google.useAuthRequest({
-    expoClientId: '183829205137-8eu9h56op0bqib757ed51rrc2r1f39dn.apps.googleusercontent.com',
+    expoClientId: '739255668856-jdv51nh7ukjj1fgmsdbr3uv440vholjo.apps.googleusercontent.com',
   }); 
 
   React.useEffect(() => {

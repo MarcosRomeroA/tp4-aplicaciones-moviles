@@ -1,5 +1,5 @@
 import React from 'react';
-import FilmDetail from '../Components/FilmDetail';
+import FilmDetail from '../components/FilmDetail';
 
 export const FilmDetailScreen = ({ route }) => {
 
