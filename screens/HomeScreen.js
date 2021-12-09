@@ -1,7 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text } from 'react-native';
 import { AuthContext } from '../context/AuthContext';
+import FilmDetail from '../Components/FilmDetail';
 
 const GOOGLE_INFO_URL = "https:/www.googleapis.com/oauth2/v3/userinfo?access_token=";
 
@@ -35,44 +36,23 @@ export const HomeScreen = () => {
     }
 
     React.useEffect(() => {
-        // Set All films
         getAllFilms().then(films => {
             const film = getRandom(films);
-
             setRandomFilm(film);
-
-            //setFilms(films);
         })
     }, [])
 
     return (
-        <View style={{marginTop: 20, paddingHorizontal: 15}}>
-            <View style={{flex:1, alignItems: 'center'}}>
+        <View style={{flex:1 ,marginTop: 20}}>
+            <View style={{alignItems: 'center', paddingHorizontal: 15}}>
                 <Text style={{fontWeight: 'bold', fontSize: 20}}>
                     Welcome {user.given_name}
                 </Text>
+                <Text style={{marginTop: 20, fontSize: 20}}>
+                    Have you seen this movie?
+                </Text>
             </View>
-            <Text style={{marginTop: 50, fontSize: 20}}>
-                Have you seen this movie?
-            </Text>
-            <Text style={{marginTop: 25, fontSize: 25}}>
-                {randomFilm.title}
-            </Text>
-
-            <Text style={{marginTop:20, fontWeight: 'bold', fontSize: 20}}>
-                Synopsis 
-            </Text>
-
-            <Text style={{marginTop: 15}}>
-                {randomFilm.description}
-            </Text>
-
-            <Image
-                style={styles.image}
-                source={{
-                    uri: randomFilm.image,
-                }}
-            />
+            <FilmDetail film={randomFilm} />
         </View>
     )
 }
@@ -81,11 +61,3 @@ function getRandom(list) {
     return list[Math.floor((Math.random()*list.length))];
 }
 
-const styles = StyleSheet.create({
-    image: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: 200,
-        marginTop: 20
-    }
-});

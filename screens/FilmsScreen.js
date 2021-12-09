@@ -35,14 +35,14 @@ export const FilmsScreen = () => {
                             justifyContent: 'center', 
                             alignContent:'center', 
                             fontSize:15,
-                            marginBottom: 50
+                            marginBottom: 20
                         }}>
                         List of Studio Ghibli Films
                     </Text>
                 </View>
                 <View
                     style={{
-                        height:500,
+                        height:600,
                     }}
                 >  
                     <View>
@@ -52,8 +52,8 @@ export const FilmsScreen = () => {
                                 data={films}
                                 keyExtractor={(item) => item.id.toString()}
                                 renderItem={({item})=>(
-                                    <TouchableOpacity onPress={()=>navigation.navigate('Film Detail', item)}>
-                                        <View>
+                                    <TouchableOpacity onPress={()=>navigation.navigate('Film Detail', item)} style={{marginTop: 15, backgroundColor: 'lavender', padding: 5}}>
+                                        <View >
                                             <Text>{item.title}</Text>
                                         </View>
                                     </TouchableOpacity>
